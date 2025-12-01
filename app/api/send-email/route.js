@@ -65,10 +65,10 @@ export async function POST(request) {
             subject: '¡Hola!',
             html: `
                 <div style="font-family: sans-serif; padding: 20px; border: 1px solid #eee;">
-                    <h1 style="color: #007bff;">¡Hola capullo (${giver})!</h1>
+                    <h1 style="color: #007bff;">¡Hola (${giver})!</h1>
                     <p style="font-size: 16px;">Tu enemigo invisible es:</p>
                     <h2 style="color: #e91e63; font-size: 24px; margin: 15px 0;">${receiverName}</h2>
-                    <p>BONA SORT I PUTA ESPANYA!</p>
+  
                 </div>
             `,
         });
