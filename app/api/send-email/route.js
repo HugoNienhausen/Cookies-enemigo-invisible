@@ -60,9 +60,9 @@ export async function POST(request) {
     try {
         const emailResponse = await resend.emails.send({
             // *** IMPORTANTE: Usa la dirección "from" VERIFICADA en Resend ***
-            from: 'Enemigo Invisible <onboarding@resend.dev>', 
+            from: 'Enemigo Invisible <hugo@descuadra.com>', 
             to: [normalizedEmail], 
-            subject: '¡A Nacho le gustan las lesbianas!',
+            subject: '¡Hola!',
             html: `
                 <div style="font-family: sans-serif; padding: 20px; border: 1px solid #eee;">
                     <h1 style="color: #007bff;">¡Hola capullo (${giver})!</h1>
