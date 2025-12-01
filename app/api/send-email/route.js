@@ -49,7 +49,7 @@ export async function POST(request) {
     // 5. Enviar el correo electrónico usando Resend
     const emailResponse = await resend.emails.send({
         // **IMPORTANTE:** Cambia 'tudominio.com' por un dominio o correo verificado en Resend
-        from: 'Amigo Invisible <amigo-invisible@tudominio.com>', 
+        from: 'Amigo Invisible <hugo.nienhausen@gmail.com>', 
         to: [normalizedEmail], // El correo de la persona que introdujo el mail
         subject: '¡Ya tienes a tu Amigo Invisible 🎁!',
         html: `
