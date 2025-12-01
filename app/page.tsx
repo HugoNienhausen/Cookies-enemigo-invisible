@@ -54,7 +54,7 @@ export default function HomePage() {
     const handleSubmit = async (e: React.FormEvent) => { // Usamos el tipo React.FormEvent de TypeScript
         e.preventDefault();
         setIsSending(true);
-        setMessage('Enviando y verificando...');
+        setMessage('Enviando');
         setMessageType('');
 
         try {
@@ -88,20 +88,20 @@ export default function HomePage() {
 
     return (
         <div style={styles.container}>
-            <h2>¡Descubre a tu Amigo Invisible! 🎁</h2>
+            <h2>Cookies enemigo invisible</h2>
             <form onSubmit={handleSubmit}>
-                <label htmlFor="email">Introduce tu Correo Electrónico:</label>
+                <label htmlFor="email">Pon tu putisimo correo:</label>
                 <input
                     type="email"
                     id="email"
-                    placeholder="tu.correo@gmail.com"
+                    placeholder="correo@gmail.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
                     style={styles.input}
                 />
                 <button type="submit" disabled={isSending} style={styles.button}>
-                    {isSending ? 'Verificando...' : '¡Dame mi Asignación!'}
+                    {isSending ? 'Grindando...' : 'Dame mi asignacion'}
                 </button>
                 <p style={{ ...styles.message, ...(messageType === 'error' ? styles.error : styles.success) }}>
                     {message}

@@ -39,7 +39,7 @@ export async function POST(request) {
     if (ACCESS_LOG[normalizedEmail]) {
         console.log(`LOG 3: El usuario ${normalizedEmail} ya ha recibido su correo.`);
         return NextResponse.json({ 
-            message: '¡Ya se te ha asignado tu amigo invisible! Revisa tu correo.', 
+            message: 'mira tu correo y tu spam', 
             sent: true 
         }, { status: 200 });
     }
@@ -60,15 +60,15 @@ export async function POST(request) {
     try {
         const emailResponse = await resend.emails.send({
             // *** IMPORTANTE: Usa la dirección "from" VERIFICADA en Resend ***
-            from: 'Amigo Invisible <onboarding@resend.dev>', 
+            from: 'Enemigo Invisible <onboarding@resend.dev>', 
             to: [normalizedEmail], 
-            subject: '¡Ya tienes a tu Amigo Invisible 🎁!',
+            subject: '¡A Nacho le gustan las lesbianas!',
             html: `
                 <div style="font-family: sans-serif; padding: 20px; border: 1px solid #eee;">
-                    <h1 style="color: #007bff;">¡Hola ${giver}!</h1>
-                    <p style="font-size: 16px;">Tu amigo invisible, la persona a la que debes hacer un regalo, es:</p>
+                    <h1 style="color: #007bff;">¡Hola capullo (${giver})!</h1>
+                    <p style="font-size: 16px;">Tu enemigo invisible es:</p>
                     <h2 style="color: #e91e63; font-size: 24px; margin: 15px 0;">${receiverName}</h2>
-                    <p>¡No lo compartas con nadie! Y recuerda, la fecha de intercambio es [Fecha aquí].</p>
+                    <p>BONA SORT I PUTA ESPANYA!</p>
                 </div>
             `,
         });
