@@ -78,7 +78,7 @@ export async function POST(request) {
         console.log("LOG 6: Correo enviado y acceso registrado con éxito.");
 
         return NextResponse.json({
-            message: '¡Correo enviado con éxito! Revisa tu bandeja de entrada (y spam).',
+            message: 'Mira tu correo',
             sent: true
         }, { status: 200 });
 
